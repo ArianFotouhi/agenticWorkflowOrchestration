@@ -9,6 +9,7 @@ This repository implements a modular **agent-based workflow orchestration system
 - Visualized agent graph structure (via `draw_graph`)
 
 In this work, to optimize embedding search speed in the vector store, agents filter documents by category — reducing the vector search space and minimizing processing and computation overhead.
+
 ---
 
 ## 🚀 Quick Start
