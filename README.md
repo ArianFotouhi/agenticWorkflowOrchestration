@@ -10,7 +10,7 @@ This repository implements a modular **agent-based workflow orchestration system
 
 In this work, to optimize embedding search speed in the vector store, agents filter documents by category — reducing the vector search space and minimizing processing and computation overhead.
 
----
+-----
 
 ## 🚀 Quick Start
 
@@ -20,15 +20,15 @@ In this work, to optimize embedding search speed in the vector store, agents fil
 OPENAI_API_KEY=your-openai-key PINECONE_API_KEY=your-pinecone-key python3 main.py
 ```
 
-The CLI will:
+The Workflow will:
 
-Spawn a Triage Agent
+- Spawn a Triage Agent
 
-Route the query to one of the domain agents
+- Route the query to one of the domain agents
 
-Agents fetch relevant info via Pinecone
+- Agents fetch relevant info via Pinecone
 
-LLM provides a document-grounded answer
+- LLM provides a document-grounded answer
 
 🧠 Agent Overview
 
