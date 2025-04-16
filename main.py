@@ -154,7 +154,7 @@ async def main():
 
         result =  Runner.run_streamed(
         starting_agent=triage_agent,
-        input="heck the documents and tell when security patches are applied?"
+        input="when security patches are applied?"
         )
         async for event in result.stream_events():
             if event.type == "raw_response_event" and isinstance(event.data, ResponseTextDeltaEvent):
@@ -166,7 +166,7 @@ async def main():
 
         result =  Runner.run_streamed(
         starting_agent=triage_agent,
-        input="heck the documents and tell refund is acceptanle within how many days of purchase?"
+        input="refund is acceptanle within how many days of purchase?"
         )
         async for event in result.stream_events():
             if event.type == "raw_response_event" and isinstance(event.data, ResponseTextDeltaEvent):

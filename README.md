@@ -103,7 +103,7 @@ security_policies = [
 ```python
 Runner.run_sync(
     starting_agent=triage_agent,
-    input="check the documents and tell refund is acceptable within how many days of purchase?"
+    input="refund is acceptable within how many days of purchase?"
 )
 ```
 Vector Store Output for K=3
@@ -122,11 +122,11 @@ Final Output
 Refunds are acceptable within 30 days of the original purchase.                                                                                                                           
 ```
 
-### Test 2:
+### Input 2:
 ```python
 Runner.run_streamed(
     starting_agent=triage_agent,
-    input="check the documents and tell when security patches are applied?"
+    input="when security patches are applied?"
 )
 ```
 Vector Store Output for K=3
