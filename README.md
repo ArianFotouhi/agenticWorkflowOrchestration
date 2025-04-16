@@ -42,13 +42,7 @@ Wrapper over Pinecone’s API
 
 Supports:
 
-Index creation (if absent)
-
-Data upsert
-
-Category-filtered semantic search
-
-Re-ranking with bge-reranker-v2-m3
+Index creation (if absent), Data upsert, Category-filtered semantic search, Re-ranking with bge-reranker-v2-m3 in Pinecone
 
 To run the application, it can be either sync or async (eg in case of streaming). The default output is by streaming however, it can be sync using the below code: 
 ```python
