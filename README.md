@@ -30,19 +30,8 @@ The Workflow will:
 
 - LLM provides a document-grounded answer
 
-🧠 Agent Overview
 
-Agent Name	Responsibility	Tool Used
-Triage Agent	Routes query to correct sub-agent	N/A
-Billing Agent	Handles refund, payment, and invoice queries	get_billing_info()
-Security Agent	Responds to security-related policies	get_security_info()
-Cancelation Agent	Handles service cancelations	get_cancelation_info()
-Renewal Agent	Assists with plan renewals	get_renewal_info()
-All tools query Pinecone with category-based filtering (billing, security, etc.)
 
-🛠 Core Components
-🧩 Agents & Tools (main.py)
-Defined using Agent(...) and @function_tool
 
 Each agent routes to Pinecone for relevant document chunks
 
@@ -60,6 +49,40 @@ Data upsert
 Category-filtered semantic search
 
 Re-ranking with bge-reranker-v2-m3
+
+To run the application, it can be either sync or async (eg in case of streaming). The default output is by streaming however, it can be sync using the below code: 
+```python
+result1= Runner.run_sync(
+starting_agent=triage_agent,
+input="check the documents and tell me refund is acceptanle within how many days of purchase?",
+)
+for result in result1.new_items:
+    print(result)
+print('-'*80)
+for result in result1.raw_responses:
+    print(result)
+print('-'*80)
+print(result1)
+
+
+
+
+result2= Runner.run_sync(
+starting_agent=triage_agent,
+input="check the documents and tell me refund is acceptanle within how many days of purchase?",
+)
+
+
+for result in result2.new_items:
+    print(result)
+print('-'*80)
+for result in result2.raw_responses:
+    print(result)
+print('-'*80)
+print(result2)
+
+```
+
 
 🧪 Example Queries
 Assuming these are the records in the vector store

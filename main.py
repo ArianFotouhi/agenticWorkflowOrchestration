@@ -139,34 +139,6 @@ triage_agent = Agent(
 )
 
 
-# result1= Runner.run_sync(
-# starting_agent=triage_agent,
-# input="check the documents and tell me refund is acceptanle within how many days of purchase?",
-# )
-# for result in result1.new_items:
-#     print(result)
-# print('-'*80)
-# for result in result1.raw_responses:
-#     print(result)
-# print('-'*80)
-
-
-
-# print(
-# Runner.run_sync(
-# starting_agent=triage_agent,
-# input="check the documents and tell me refund is acceptanle within how many days of purchase?",
-# )
-
-# )
-# print('-'*80)
-
-
-# print(
-# Runner.run_sync(
-# starting_agent=triage_agent,
-# input="check the documents and tell me when security patches are applied?"
-# ))
 
 
 
