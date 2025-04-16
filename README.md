@@ -98,6 +98,8 @@ security_policies = [
 ]
 ```
 
+Input 1:
+
 ```python
 Runner.run_sync(
     starting_agent=triage_agent,
@@ -120,6 +122,7 @@ Final Output
 Refunds are acceptable within 30 days of the original purchase.                                                                                                                           
 ```
 
+Input 2:
 ```python
 Runner.run_streamed(
     starting_agent=triage_agent,
