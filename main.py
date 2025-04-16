@@ -112,14 +112,14 @@ cancelation_agent = Agent(
     name="Cancelation Agent",
     instructions="You assist users with canceling services or subscriptions. Always use tools to fetch document information",
     tools=[get_cancelation_info],
-    # model=MODEL_NAME
+    model=MODEL_NAME
 )
 
 renewal_agent = Agent(
     name="Renewal Agent",
     instructions="You help users renew their services or subscriptions. Always use tools to fetch document information",
     tools=[get_renewal_info],
-    # model=MODEL_NAME
+    model=MODEL_NAME
 )
 
 billing_agent = Agent(
@@ -134,8 +134,8 @@ triage_agent = Agent(
     name="Triage Agent",
     instructions="Route the user to the correct agent based on their question.",
     handoffs=[billing_agent, security_agent, renewal_agent, cancelation_agent],
-    # model=MODEL_NAME
-    # handoff_description="questions related to billing are passed to billing agent along with user question, and questions related to weather are passed to weather agent along with the city"
+    model=MODEL_NAME
+    # handoff_description="questions related to billing are passed to billing agent along with user question, and questions related to ..."
 )
 
 
