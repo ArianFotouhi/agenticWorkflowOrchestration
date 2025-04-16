@@ -162,14 +162,3 @@ def format_error(e):
     }
 ```
 
-📈 Future Improvements
-Add tool_use_behavior='always' for stricter tool invocation
-
-Improve tool return formatting (structured JSON output)
-
-Add agent memory (conversation context)
-
-Support multi-turn interactions
-
-Integrate LangChain or CrewAI if needed
-
